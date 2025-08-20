@@ -83,6 +83,11 @@ const Marketplace = () => {
   };
 
   return (
+    <>
+     <Helmet>
+      <title>Marketplace</title>
+      <meta name="description" content="Browse and manage available services in the marketplace." />
+    </Helmet>
     <div className="space-y-6">
       <div>
         <h1 className="text-3xl font-bold text-gray-900">Lead Marketplace</h1>
@@ -125,6 +130,7 @@ const Marketplace = () => {
         calculatePotentialEarnings={calculatePotentialEarnings}
       />
     </div>
+    </>
   );
 };
 
