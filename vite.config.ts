@@ -27,6 +27,9 @@ export default defineConfig(({ mode }) => ({
   build: {
     rollupOptions: {
       external: [],
+      output: {
+        manualChunks: undefined,
+      },
     },
   },
 }));
