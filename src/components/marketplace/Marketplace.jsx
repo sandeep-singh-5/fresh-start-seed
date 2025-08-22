@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { useJobs } from '@/hooks/useJobs';
-import { useAuth } from '@/hooks/useAuth';
-import MarketplaceStats from '@/components/marketplace/MarketplaceStats';
-import MarketplaceFilters from '@/components/marketplace/MarketplaceFilters';
-import MarketplaceList from '@/components/marketplace/MarketplaceList';
-import LeadViewDialog from '@/components/marketplace/LeadViewDialog';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { toast } from '@/components/ui/use-toast';
+import { useJobs } from '../../hooks/useJobs';
+import { useAuth } from '../../hooks/useAuth';
+import MarketplaceStats from './MarketplaceStats';
+import MarketplaceFilters from './MarketplaceFilters';
+import MarketplaceList from './MarketplaceList';
+import LeadViewDialog from './LeadViewDialog';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import { toast } from '../../hooks/use-toast';
 
 const Marketplace = () => {
   const [searchTerm, setSearchTerm] = useState('');
