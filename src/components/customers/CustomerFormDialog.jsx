@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input.jsx';
-import { Label } from '@/components/ui/label.jsx';
-import PhoneInput from '@/components/ui/PhoneInput.jsx';
-import { toast } from '@/components/ui/use-toast';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '../ui/dialog';
+import { Button } from '../ui/button';
+import { Input } from '../ui/input.jsx';
+import { Label } from '../ui/label.jsx';
+import PhoneInput from '../ui/PhoneInput.jsx';
+import { toast } from '../ui/use-toast';
 
 const initialFormData = {
   firstName: '', lastName: '', email: '', phone: '', 
