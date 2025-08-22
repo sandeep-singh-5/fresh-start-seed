@@ -1,6 +1,6 @@
 import React from 'react';
 import InputMask from 'react-input-mask';
-import { Input } from '@/components/ui/input.jsx';
+import { Input } from './input.jsx';
 
 const PhoneInput = React.forwardRef(({ value, onChange, ...props }, ref) => {
   const handleChange = (event) => {
