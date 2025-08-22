@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Bell, CheckCircle, AlertTriangle, Info, X } from 'lucide-react';
-import { useNotifications } from '@/hooks/useNotifications.jsx';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { ScrollArea } from '@/components/ui/scroll-area'; 
-import { cn } from '@/lib/utils';
+import { useNotifications } from '../../hooks/useNotifications.jsx';
+import { Button } from '../ui/button';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../ui/card';
+import { Badge } from '../ui/badge';
+import { ScrollArea } from '../ui/scroll-area'; 
+import { cn } from '../../lib/utils';
 
 const NotificationsPage = () => {
   const { notifications, unreadCount, markAsRead, addNotification } = useNotifications();
