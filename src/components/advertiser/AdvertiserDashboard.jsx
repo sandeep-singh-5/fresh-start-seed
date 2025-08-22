@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Plus, TrendingUp, Clock, Star, DollarSign, Award, Users, Briefcase } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
-import { useJobs } from '@/hooks/useJobs';
-import { useAuth } from '@/hooks/useAuth';
-import PostJobForm from '@/components/advertiser/PostJobForm';
-import JobCard from '@/components/shared/JobCard.jsx';
+import { Button } from '../ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
+import { Dialog, DialogContent } from '../ui/dialog';
+import { useJobs } from '../../hooks/useJobs';
+import { useAuth } from '../../hooks/useAuth';
+import PostJobForm from './PostJobForm';
+import JobCard from '../shared/JobCard.jsx';
 
 const AdvertiserDashboard = () => {
   const [showPostJob, setShowPostJob] = useState(false);
