@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
+import { Input } from '../ui/input';
+import { Button } from '../ui/button';
+import { ScrollArea } from '../ui/scroll-area';
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { Users, Send, Paperclip, Search, MessageSquare, Briefcase } from 'lucide-react';
-import { useMessages } from '@/hooks/useMessages.jsx';
-import { useAuth } from '@/hooks/useAuth.jsx';
-import { Badge } from '@/components/ui/badge';
+import { useMessages } from '../../hooks/useMessages.jsx';
+import { useAuth } from '../../hooks/useAuth.jsx';
+import { Badge } from '../ui/badge';
 
 const MessagesPage = () => {
   const { user } = useAuth();
