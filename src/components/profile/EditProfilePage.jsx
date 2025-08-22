@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useAuth } from '@/hooks/useAuth.jsx';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { toast } from '@/components/ui/use-toast';
+import { useAuth } from '../../hooks/useAuth.jsx';
+import { Button } from '../ui/button';
+import { Input } from '../ui/input';
+import { Label } from '../ui/label';
+import { Textarea } from '../ui/textarea';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../ui/card';
+import { toast } from '../../hooks/use-toast';
 import { Save, Image as ImageIcon, ArrowLeft } from 'lucide-react';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 
 const EditProfilePage = ({ setCurrentView }) => {
   const { user, updateUser } = useAuth();
