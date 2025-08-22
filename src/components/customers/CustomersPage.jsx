@@ -1,17 +1,17 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Plus, UserCircle, Eye, Star, DollarSign } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input.jsx';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { useCustomers } from '@/hooks/useCustomers';
-import { useJobs } from '@/hooks/useJobs.jsx';
-import { toast } from '@/components/ui/use-toast';
-import { CustomerFormDialog } from '@/components/customers/CustomerFormDialog.jsx';
-import { CustomerDetailsDialog } from '@/components/customers/CustomerDetailsDialog.jsx';
-import { CustomerList } from '@/components/customers/CustomerList.jsx';
-import { CustomerStatsCards } from '@/components/customers/CustomerStatsCards.jsx';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+import { Button } from '../ui/button';
+import { Input } from '../ui/input.jsx';
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
+import { useCustomers } from '../../hooks/useCustomers';
+import { useJobs } from '../../hooks/useJobs.jsx';
+import { toast } from '../../hooks/use-toast';
+import { CustomerFormDialog } from './CustomerFormDialog.jsx';
+import { CustomerDetailsDialog } from './CustomerDetailsDialog.jsx';
+import { CustomerList } from './CustomerList.jsx';
+import { CustomerStatsCards } from './CustomerStatsCards.jsx';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '../ui/dropdown-menu';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
 
