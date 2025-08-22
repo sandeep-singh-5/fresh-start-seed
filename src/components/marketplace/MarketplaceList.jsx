@@ -1,5 +1,5 @@
 import React from 'react';
-import MarketplaceListItem from '@/components/marketplace/MarketplaceListItem';
+import MarketplaceListItem from './MarketplaceListItem';
 
 const MarketplaceList = ({ jobs, onSelectJob, onApplyToJob, user, calculatePotentialEarnings }) => {
   if (jobs.length === 0) {
