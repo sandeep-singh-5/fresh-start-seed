@@ -1,7 +1,7 @@
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 import { fileURLToPath } from 'url';
-import { EDIT_MODE_STYLES } from './visual-editor-config';
+import { EDIT_MODE_STYLES, POPUP_STYLES } from './visual-editor-config';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = resolve(__filename, '..');
@@ -23,7 +23,8 @@ export default function inlineEditDevPlugin() {
         },
         {
           tag: 'style',
-          children: EDIT_MODE_STYLES,
+          attrs: { id: 'inline-editor-styles' },
+          children: `${EDIT_MODE_STYLES}\n${POPUP_STYLES}`,
           injectTo: 'head'
         }
       ];

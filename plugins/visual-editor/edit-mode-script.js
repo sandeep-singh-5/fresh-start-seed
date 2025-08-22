@@ -1,4 +1,4 @@
-import { POPUP_STYLES } from './plugins/visual-editor/visual-editor-config.js';
+/* POPUP_STYLES is injected by the Vite plugin at runtime. */
 
 const PLUGIN_APPLY_EDIT_API_URL = '/api/apply-edit';
 
@@ -26,10 +26,20 @@ let currentEditingInfo = null;
 function injectPopupStyles() {
   if (areStylesInjected) return;
 
-  const styleElement = document.createElement('style');
-  styleElement.id = 'inline-editor-styles';
-  styleElement.textContent = POPUP_STYLES;
-  document.head.appendChild(styleElement);
+  // If styles were already injected by the Vite plugin, mark as injected
+  const existing = document.getElementById('inline-editor-styles');
+  if (existing) {
+    areStylesInjected = true;
+    return;
+  }
+  // Fallback: if provided via window variable, inject once
+  const css = (typeof window !== 'undefined' && window.__INLINE_EDITOR_POPUP_STYLES__) || '';
+  if (css) {
+    const styleElement = document.createElement('style');
+    styleElement.id = 'inline-editor-styles';
+    styleElement.textContent = css;
+    document.head.appendChild(styleElement);
+  }
   areStylesInjected = true;
 }
 
@@ -62,14 +72,14 @@ function showPopup(targetElement, editId, currentContent, isImage = false) {
 
  const parentOrigin = getParentOrigin();
 
- if (parentOrigin && ALLOWED_PARENT_ORIGINS.includes(parentOrigin)) {
-   const eventType = isImage ? 'imageEditEnter' : 'editEnter';
-   
-   window.parent.postMessage({
-     type: eventType,
-     payload: { currentText: currentContent }
-   }, parentOrigin);
- }
+  if (parentOrigin && isAllowedParentOrigin(parentOrigin)) {
+    const eventType = isImage ? 'imageEditEnter' : 'editEnter';
+    
+    window.parent.postMessage({
+      type: eventType,
+      payload: { currentText: currentContent }
+    }, parentOrigin);
+  }
 }
 
 function handleGlobalEvent(event) {
@@ -129,6 +139,17 @@ function getParentOrigin() {
   return null;
 }
 
+function isAllowedParentOrigin(origin) {
+  if (!origin) return false;
+  if (ALLOWED_PARENT_ORIGINS.includes(origin)) return true;
+  try {
+    const { hostname } = new URL(origin);
+    return hostname.endsWith('.lovable.app') || hostname.endsWith('.lovable.dev');
+  } catch (e) {
+    return false;
+  }
+}
+
 async function handleEditSave(updatedText) {
   const newText = updatedText
   // Replacing characters that cause Babel parser to crash
@@ -154,7 +175,7 @@ async function handleEditSave(updatedText) {
     const result = await response.json();
     if (result.success) {
       const parentOrigin = getParentOrigin();
-      if (parentOrigin && ALLOWED_PARENT_ORIGINS.includes(parentOrigin)) {
+      if (parentOrigin && isAllowedParentOrigin(parentOrigin)) {
         window.parent.postMessage({
           type: 'editApplied',
           payload: {
