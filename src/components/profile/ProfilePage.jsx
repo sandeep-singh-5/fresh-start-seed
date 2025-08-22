@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useAuth } from '@/hooks/useAuth.jsx';
-import UserProfileCard from '@/components/shared/UserProfileCard.jsx';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { useAuth } from '../../hooks/useAuth.jsx';
+import UserProfileCard from '../shared/UserProfileCard.jsx';
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
+import { Button } from '../ui/button';
 import { Edit, Mail, Phone, Home, Info, Briefcase } from 'lucide-react';
 
 const ProfilePage = ({ setCurrentView }) => {
