@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { useJobs } from '@/hooks/useJobs';
-import { useSettings } from '@/hooks/useSettings';
-import { useCustomers } from '@/hooks/useCustomers';
-import { useAuth } from '@/hooks/useAuth.jsx';
-import { toast } from '@/components/ui/use-toast';
-import JobDetailsForm from '@/components/advertiser/form-parts/JobDetailsForm.jsx';
-import ProfitSharingForm from '@/components/advertiser/form-parts/ProfitSharingForm.jsx';
-import JobRequirementsForm from '@/components/advertiser/form-parts/JobRequirementsForm.jsx';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
-import { Input } from '@/components/ui/input';
+import { Button } from '../ui/button';
+import { useJobs } from '../../hooks/useJobs';
+import { useSettings } from '../../hooks/useSettings';
+import { useCustomers } from '../../hooks/useCustomers';
+import { useAuth } from '../../hooks/useAuth.jsx';
+import { toast } from '../ui/use-toast';
+import JobDetailsForm from '../advertiser/form-parts/JobDetailsForm.jsx';
+import ProfitSharingForm from '../advertiser/form-parts/ProfitSharingForm.jsx';
+import JobRequirementsForm from '../advertiser/form-parts/JobRequirementsForm.jsx';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogFooter } from '../ui/dialog';
+import { Input } from '../ui/input';
 import { Search, UserPlus, ListChecks } from 'lucide-react';
-import { Label } from '@/components/ui/label';
-import PhoneInput from '@/components/ui/PhoneInput';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Label } from '../ui/label';
+import PhoneInput from '../ui/PhoneInput';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
 
 
 const EditJobForm = ({ jobData, onJobUpdated }) => {
