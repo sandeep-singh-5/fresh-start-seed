@@ -1,15 +1,15 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Wrench } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { useAuth } from '@/hooks/useAuth.jsx'; 
-import { useSettings } from '@/hooks/useSettings.jsx';
-import { useFavorites } from '@/hooks/useFavorites.jsx';
-import { useMessages } from '@/hooks/useMessages.jsx';
-import { useToast } from '@/components/ui/use-toast.js';
-import ServiceProFilters from '@/components/servicepros/ServiceProFilters.jsx';
-import ServiceProTable from '@/components/servicepros/ServiceProTable.jsx';
-import AddToFavoritesDialog from '@/components/servicepros/AddToFavoritesDialog.jsx';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../ui/card';
+import { useAuth } from '../../hooks/useAuth.jsx'; 
+import { useSettings } from '../../hooks/useSettings.jsx';
+import { useFavorites } from '../../hooks/useFavorites.jsx';
+import { useMessages } from '../../hooks/useMessages.jsx';
+import { useToast } from '../../hooks/use-toast.js';
+import ServiceProFilters from './ServiceProFilters.jsx';
+import ServiceProTable from './ServiceProTable.jsx';
+import AddToFavoritesDialog from './AddToFavoritesDialog.jsx';
 
 const ServiceProsPage = ({ setCurrentView }) => {
   const [searchTerm, setSearchTerm] = useState('');
