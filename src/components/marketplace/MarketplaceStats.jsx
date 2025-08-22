@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent } from '../ui/card';
 import { TrendingUp, Clock, DollarSign, Award, Users } from 'lucide-react';
 
 const MarketplaceStats = ({ stats }) => {
