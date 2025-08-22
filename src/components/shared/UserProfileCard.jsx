@@ -1,8 +1,8 @@
 import React from 'react';
 import { Star, Clock, Award, TrendingUp, Calendar, MapPin, Briefcase, Wrench, Mail, Phone, Building, UserCircle } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
+import { Badge } from '../ui/badge';
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 
 const UserProfileCard = ({ user, reviews = [] }) => {
   if (!user) return null;
