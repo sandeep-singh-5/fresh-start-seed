@@ -6,7 +6,7 @@ import {
 	ToastTitle,
 	ToastViewport,
 } from './toast';
-import { useToast } from './use-toast';
+import { useToast } from '../../hooks/use-toast';
 import React from 'react';
 
 export function Toaster() {
