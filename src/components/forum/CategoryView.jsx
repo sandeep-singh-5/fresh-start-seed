@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { useForum } from '@/hooks/useForum.jsx';
-import { useAuth } from '@/hooks/useAuth.jsx';
-import { Button } from '@/components/ui/button';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
+import { useForum } from '../../hooks/useForum.jsx';
+import { useAuth } from '../../hooks/useAuth.jsx';
+import { Button } from '../ui/button';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../ui/card';
 import { ArrowLeft, PlusCircle, MessageSquare, Loader2, ThumbsUp, Star } from 'lucide-react';
-import ForumListItem from '@/components/forum/ForumListItem.jsx';
-import CreateThreadForm from '@/components/forum/CreateThreadForm.jsx';
+import ForumListItem from './ForumListItem.jsx';
+import CreateThreadForm from './CreateThreadForm.jsx';
 import {
   Dialog,
   DialogContent,
@@ -16,7 +16,7 @@ import {
   DialogDescription,
   DialogFooter,
   DialogClose
-} from "@/components/ui/dialog";
+} from "../ui/dialog";
 
 const iconMap = {
   MessageSquare,
