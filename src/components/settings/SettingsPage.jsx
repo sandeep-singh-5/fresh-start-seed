@@ -1,18 +1,18 @@
 import React from 'react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs.jsx";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs.jsx";
 import { 
   UserCircle, BellRing, Percent, Tag as TagIcon, 
   Palette, Wrench, FileText, ListChecks, SlidersHorizontal
 } from 'lucide-react';
-import AccountSettings from '@/components/settings/AccountSettings.jsx';
-import LeadShareSettings from '@/components/settings/LeadShareSettings.jsx';
-import TagSettings from '@/components/settings/TagSettings.jsx';
-import PipelineSettings from '@/components/settings/PipelineSettings.jsx';
-import SkillSettings from '@/components/settings/SkillSettings.jsx';
-import JobTemplateSettings from '@/components/settings/JobTemplateSettings.jsx';
-import ReminderSettings from '@/components/settings/ReminderSettings.jsx';
-import ChecklistSettings from '@/components/settings/ChecklistSettings.jsx'; 
-import { useAuth } from '@/hooks/useAuth.jsx';
+import AccountSettings from './AccountSettings.jsx';
+import LeadShareSettings from './LeadShareSettings.jsx';
+import TagSettings from './TagSettings.jsx';
+import PipelineSettings from './PipelineSettings.jsx';
+import SkillSettings from './SkillSettings.jsx';
+import JobTemplateSettings from './JobTemplateSettings.jsx';
+import ReminderSettings from './ReminderSettings.jsx';
+import ChecklistSettings from './ChecklistSettings.jsx'; 
+import { useAuth } from '../../hooks/useAuth.jsx';
 import { motion } from 'framer-motion';
 
 const SettingsPage = () => {
