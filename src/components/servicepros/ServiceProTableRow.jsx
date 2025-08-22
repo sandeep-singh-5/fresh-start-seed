@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Star, Briefcase, MapPin, Award, MessageSquare, ChevronDown, ChevronUp, Heart, CalendarDays, Clock, ShieldCheck, Sparkles, TrendingUp, UserCircle } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { TableCell, TableRow } from "@/components/ui/table";
+import { Badge } from '../ui/badge';
+import { Button } from '../ui/button';
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
+import { TableCell, TableRow } from "../ui/table";
 
 const ServiceProTableRow = ({ pro, expandedRow, toggleRowExpansion, openAddToFavoritesDialog, isServiceProInAnyFavoriteList, onContact }) => {
   const jobClosingRate = pro.stats?.jobClosingRate;

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Table, TableBody, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import ServiceProTableRow from '@/components/servicepros/ServiceProTableRow.jsx';
+import { Table, TableBody, TableHead, TableHeader, TableRow } from "../ui/table";
+import ServiceProTableRow from './ServiceProTableRow.jsx';
 
 const ServiceProTable = ({ servicePros, expandedRow, toggleRowExpansion, openAddToFavoritesDialog, isServiceProInAnyFavoriteList, onContactServicePro }) => {
   return (
