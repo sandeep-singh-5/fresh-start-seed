@@ -1,6 +1,6 @@
 import React from 'react';
 import { Search } from 'lucide-react';
-import JobListItem from '@/components/jobs/JobListItem';
+import JobListItem from './JobListItem';
 
 const JobList = ({ jobs, userType, onSelectJobForView, onOpenEditDialog, onDeleteJob }) => {
   if (jobs.length === 0) {

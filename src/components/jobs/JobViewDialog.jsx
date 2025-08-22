@@ -1,15 +1,15 @@
 import React from 'react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '../ui/dialog';
+import { Card, CardContent } from '../ui/card';
+import { Badge } from '../ui/badge';
+import { Button } from '../ui/button';
 import { Edit, ChevronDown, ListChecks } from 'lucide-react';
-import JobProgressBar from '@/components/jobs/JobProgressBar.jsx';
-import JobChecklistDisplay from '@/components/jobs/JobChecklistDisplay.jsx';
-import JobActivityLog from '@/components/jobs/JobActivityLog.jsx';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { useJobs } from '@/hooks/useJobs.jsx';
-import { toast } from '@/components/ui/use-toast';
+import JobProgressBar from './JobProgressBar.jsx';
+import JobChecklistDisplay from './JobChecklistDisplay.jsx';
+import JobActivityLog from './JobActivityLog.jsx';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '../ui/dropdown-menu';
+import { useJobs } from '../../hooks/useJobs.jsx';
+import { toast } from '../ui/use-toast';
 
 const JOB_STAGES_ADVERTISER = ['open', 'assigned', 'in progress', 'completed', 'paid', 'disputed'];
 const JOB_STAGES_TECHNICIAN = ['open', 'applied', 'assigned', 'in progress', 'completed', 'paid', 'disputed'];

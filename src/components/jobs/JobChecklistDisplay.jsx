@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { CheckSquare, Square, Type, UploadCloud, MessageSquare, ChevronDown, ListChecks, AlertCircle, AlertTriangle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Checkbox } from '@/components/ui/checkbox.jsx';
-import { useSettings } from '@/hooks/useSettings.jsx';
-import { useJobs } from '@/hooks/useJobs.jsx';
-import { toast } from '@/components/ui/use-toast';
+import { Button } from '../ui/button';
+import { Input } from '../ui/input';
+import { Label } from '../ui/label';
+import { Textarea } from '../ui/textarea';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
+import { Checkbox } from '../ui/checkbox.jsx';
+import { useSettings } from '../../hooks/useSettings.jsx';
+import { useJobs } from '../../hooks/useJobs.jsx';
+import { toast } from '../ui/use-toast';
 
 const JobChecklistItem = ({ item, progress, onProgressChange, isReadOnly }) => {
   const [fileValue, setFileValue] = useState(progress?.fileName || '');

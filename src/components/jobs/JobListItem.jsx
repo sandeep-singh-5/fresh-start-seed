@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { DollarSign, MapPin, Hash, ChevronDown, Trash2, Store, EyeOff } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import JobProgressBar from '@/components/jobs/JobProgressBar.jsx';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';
-import { useJobs } from '@/hooks/useJobs.jsx';
-import { toast } from '@/components/ui/use-toast';
+import { Button } from '../ui/button';
+import { Badge } from '../ui/badge';
+import JobProgressBar from './JobProgressBar.jsx';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '../ui/dropdown-menu';
+import { useJobs } from '../../hooks/useJobs.jsx';
+import { toast } from '../ui/use-toast';
 
 const JOB_STAGES_ADVERTISER = ['open', 'assigned', 'in progress', 'completed', 'paid', 'disputed'];
 const JOB_STAGES_TECHNICIAN = ['open', 'applied', 'assigned', 'in progress', 'completed', 'paid', 'disputed'];

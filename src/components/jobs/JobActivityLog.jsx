@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import { ScrollArea } from '../ui/scroll-area';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../ui/card';
 import { FileText, User, Edit3, CheckCircle, AlertTriangle, Flag, PlusCircle, Trash2, Users, DollarSign, ListChecks } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
+import { Badge } from '../ui/badge';
 
 const JobActivityLog = ({ activityLog }) => {
   if (!activityLog || activityLog.length === 0) {
