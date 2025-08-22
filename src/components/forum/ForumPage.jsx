@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useForum } from '@/hooks/useForum.jsx';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { useForum } from '../../hooks/useForum.jsx';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../ui/card';
+import { Button } from '../ui/button';
 import { MessageSquare, Star, ThumbsUp, ChevronRight, Loader2 } from 'lucide-react';
-import ForumListItem from '@/components/forum/ForumListItem.jsx';
+import ForumListItem from './ForumListItem.jsx';
 
 const iconMap = {
   MessageSquare,
