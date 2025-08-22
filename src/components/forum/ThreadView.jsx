@@ -1,14 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useForum } from '@/hooks/useForum.jsx';
-import { useAuth } from '@/hooks/useAuth.jsx';
-import { Button } from '@/components/ui/button';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Textarea } from '@/components/ui/textarea';
+import { useForum } from '../../hooks/useForum.jsx';
+import { useAuth } from '../../hooks/useAuth.jsx';
+import { Button } from '../ui/button';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '../ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
+import { Textarea } from '../ui/textarea';
 import { ArrowLeft, MessageCircle, Send, Loader2, Edit2, Trash2, Pin, PinOff } from 'lucide-react';
 import { formatDistanceToNow, parseISO } from 'date-fns';
-import { Badge } from '@/components/ui/badge';
+import { Badge } from '../ui/badge';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -19,8 +19,8 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
-import { toast } from '@/components/ui/use-toast';
+} from "../ui/alert-dialog";
+import { toast } from '../../hooks/use-toast';
 
 const PostItem = ({ post, onEdit, onDelete }) => {
   const { user } = useAuth();
