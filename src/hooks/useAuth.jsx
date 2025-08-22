@@ -1,7 +1,7 @@
 import React, { createContext, useState, useEffect, useContext, useCallback } from 'react';
-import { useToast } from '@/components/ui/use-toast';
-import { initialUsersData, createNewUserObject } from '@/hooks/auth/userData';
-import { saveUsersToStorage, loadUsersFromStorage, saveLoggedInUserToStorage, loadLoggedInUserFromStorage, removeLoggedInUserFromStorage } from '@/hooks/auth/authStorage';
+import { useToast } from '../components/ui/use-toast';
+import { initialUsersData, createNewUserObject } from './auth/userData';
+import { saveUsersToStorage, loadUsersFromStorage, saveLoggedInUserToStorage, loadLoggedInUserFromStorage, removeLoggedInUserFromStorage } from './auth/authStorage';
 
 const AuthContext = createContext(null);
 
