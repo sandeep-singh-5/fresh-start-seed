@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { Plus } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { useJobs } from '@/hooks/useJobs';
-import { useAuth } from '@/hooks/useAuth';
-import PostJobForm from '@/components/advertiser/PostJobForm';
-import EditJobForm from '@/components/jobs/EditJobForm'; 
-import { toast } from '@/components/ui/use-toast';
-import JobFilters from '@/components/jobs/JobFilters';
-import JobStatsCards from '@/components/jobs/JobStatsCards';
-import JobList from '@/components/jobs/JobList';
-import JobViewDialog from '@/components/jobs/JobViewDialog';
+import { Button } from '../ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '../ui/dialog';
+import { useJobs } from '../../hooks/useJobs';
+import { useAuth } from '../../hooks/useAuth';
+import PostJobForm from '../advertiser/PostJobForm';
+import EditJobForm from './EditJobForm'; 
+import { toast } from '../../hooks/use-toast';
+import JobFilters from './JobFilters';
+import JobStatsCards from './JobStatsCards';
+import JobList from './JobList';
+import JobViewDialog from './JobViewDialog';
 
 const JobsPage = () => {
   const [searchTerm, setSearchTerm] = useState('');

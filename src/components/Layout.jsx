@@ -4,17 +4,17 @@ import {
   Bell, MessageCircle, LogOut, User, Home, Store, Briefcase, Users, GitBranch, Settings as SettingsIcon, 
   ChevronDown, Menu, UserCheck as UserSearch, Heart, Wrench, MoreHorizontal, ChevronRight, Users2, ListChecks, SearchCheck, Workflow, MessagesSquare
 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Button } from './ui/button';
+import { Badge } from './ui/badge';
+import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { 
   DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, 
   DropdownMenuSeparator, DropdownMenuTrigger, DropdownMenuGroup
-} from '@/components/ui/dropdown-menu';
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
-import { useAuth } from '@/hooks/useAuth.jsx';
-import { useNotifications } from '@/hooks/useNotifications.jsx';
-import { useMessages } from '@/hooks/useMessages.jsx';
+} from './ui/dropdown-menu';
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from './ui/sheet';
+import { useAuth } from '../hooks/useAuth.jsx';
+import { useNotifications } from '../hooks/useNotifications.jsx';
+import { useMessages } from '../hooks/useMessages.jsx';
 
 const Layout = ({ children, currentView, setCurrentView }) => {
   const { user, logout } = useAuth();
