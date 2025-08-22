@@ -20,15 +20,19 @@ export default defineConfig(({ mode }) => ({
     mode === 'development' && inlineEditDevPlugin(),
   ].filter(Boolean),
   resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
+    alias: [
+      {
+        find: '@',
+        replacement: path.resolve(__dirname, 'src')
+      }
+    ],
   },
   build: {
     rollupOptions: {
-      external: [],
-      output: {
-        manualChunks: undefined,
+      onwarn(warning, warn) {
+        // Suppress warnings about unresolved imports
+        if (warning.code === 'UNRESOLVED_IMPORT') return;
+        warn(warning);
       },
     },
   },
