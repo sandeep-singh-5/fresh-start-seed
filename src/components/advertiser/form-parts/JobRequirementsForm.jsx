@@ -1,10 +1,10 @@
 
 import React from 'react';
-import { Label } from '@/components/ui/label.jsx';
-import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Input } from '@/components/ui/input.jsx';
-import { Badge } from '@/components/ui/badge';
+import { Label } from '../../ui/label.jsx';
+import { Textarea } from '../../ui/textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../ui/select';
+import { Input } from '../../ui/input.jsx';
+import { Badge } from '../../ui/badge';
 import { ListChecks, AlertTriangle, CalendarDays, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
 

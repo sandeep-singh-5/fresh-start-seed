@@ -1,8 +1,8 @@
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Label } from '@/components/ui/label.jsx';
-import { Badge } from '@/components/ui/badge';
-import { useSettings } from '@/hooks/useSettings';
+import { Button } from '../../ui/button';
+import { Label } from '../../ui/label.jsx';
+import { Badge } from '../../ui/badge';
+import { useSettings } from '../../../hooks/useSettings';
 import { FileText } from 'lucide-react';
 
 const JobTemplateSelector = ({ onApplyTemplate }) => {

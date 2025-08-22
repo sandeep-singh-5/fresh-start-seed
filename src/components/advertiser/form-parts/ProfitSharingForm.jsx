@@ -1,10 +1,10 @@
 import React from 'react';
-import { Input } from '@/components/ui/input.jsx';
-import { Label } from '@/components/ui/label.jsx';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Card, CardContent } from '@/components/ui/card';
+import { Input } from '../../ui/input.jsx';
+import { Label } from '../../ui/label.jsx';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../ui/select';
+import { Card, CardContent } from '../../ui/card';
 import { DollarSign, Percent, HeartHandshake as Handshake } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Button } from '../../ui/button';
 
 const JobPricingForm = ({ formData, onInputChange, paymentType, setPaymentType }) => {
   const profit = parseFloat(formData.estimatedProfit) || 0;

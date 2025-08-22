@@ -1,9 +1,9 @@
 import React from 'react';
-import { Input } from '@/components/ui/input.jsx';
-import { Label } from '@/components/ui/label.jsx';
-import { Textarea } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Button } from '@/components/ui/button.jsx';
+import { Input } from '../../ui/input.jsx';
+import { Label } from '../../ui/label.jsx';
+import { Textarea } from '../../ui/textarea';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../ui/select';
+import { Button } from '../../ui/button.jsx';
 import { UserCheck as UserSearch } from 'lucide-react';
 
 const categories = [

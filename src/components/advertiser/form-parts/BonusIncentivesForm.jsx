@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Label } from '@/components/ui/label.jsx';
-import { Input } from '@/components/ui/input.jsx';
-import { Button } from '@/components/ui/button.jsx';
-import { toast } from '@/components/ui/use-toast';
+import { Label } from '../../ui/label.jsx';
+import { Input } from '../../ui/input.jsx';
+import { Button } from '../../ui/button.jsx';
+import { toast } from '../../ui/use-toast';
 import { Gift, Plus, Trash2, DollarSign } from 'lucide-react';
 
 const BonusIncentivesForm = ({ bonuses, onBonusesChange }) => {
