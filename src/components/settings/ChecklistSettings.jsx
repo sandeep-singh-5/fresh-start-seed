@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Plus, Edit, Trash2, ListChecks, CheckSquare, Type, UploadCloud, MessageSquare, ChevronDown, ChevronUp, GripVertical, AlertTriangle } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter, DialogClose } from '@/components/ui/dialog';
-import { Switch } from '@/components/ui/switch';
-import { useSettings } from '@/hooks/useSettings.jsx';
-import { toast } from '@/components/ui/use-toast';
+import { Button } from '../ui/button';
+import { Input } from '../ui/input';
+import { Label } from '../ui/label';
+import { Textarea } from '../ui/textarea';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import { Badge } from '../ui/badge';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter, DialogClose } from '../ui/dialog';
+import { Switch } from '../ui/switch';
+import { useSettings } from '../../hooks/useSettings.jsx';
+import { toast } from '../ui/use-toast';
 import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
 
 const ChecklistItemEditor = ({ item, index, updateItem, removeItemFromChecklist }) => {

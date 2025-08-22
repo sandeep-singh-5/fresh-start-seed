@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useAuth } from '@/hooks/useAuth.jsx';
-import { Button } from '@/components/ui/button.jsx';
-import { Input } from '@/components/ui/input.jsx';
-import { Label } from '@/components/ui/label.jsx';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card.jsx';
-import { toast } from '@/components/ui/use-toast';
+import { useAuth } from '../../hooks/useAuth.jsx';
+import { Button } from '../ui/button.jsx';
+import { Input } from '../ui/input.jsx';
+import { Label } from '../ui/label.jsx';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../ui/card.jsx';
+import { toast } from '../ui/use-toast';
 import { Save, UserCircle2, Home, Phone as PhoneIcon, Mail } from 'lucide-react';
-import PhoneInput from '@/components/ui/PhoneInput.jsx';
+import PhoneInput from '../ui/PhoneInput.jsx';
 
 const AccountSettings = () => {
   const { user, updateUser, checkUsernameUnique } = useAuth();

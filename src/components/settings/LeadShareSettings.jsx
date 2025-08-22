@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Percent, Users, User } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { useSettings } from '@/hooks/useSettings.jsx';
-import { toast } from '@/components/ui/use-toast';
+import { Input } from '../ui/input';
+import { Label } from '../ui/label';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import { useSettings } from '../../hooks/useSettings.jsx';
+import { toast } from '../ui/use-toast';
 
 const LeadShareSettings = () => {
   const { settings, updateSettings } = useSettings();

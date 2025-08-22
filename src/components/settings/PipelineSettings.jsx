@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Plus, X, Edit, Save, Trash2, Palette, GripVertical } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input.jsx';
-import { Label } from '@/components/ui/label.jsx';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { useSettings } from '@/hooks/useSettings.jsx';
-import { toast } from '@/components/ui/use-toast';
+import { Button } from '../ui/button';
+import { Input } from '../ui/input.jsx';
+import { Label } from '../ui/label.jsx';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import { Badge } from '../ui/badge';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
+import { useSettings } from '../../hooks/useSettings.jsx';
+import { toast } from '../ui/use-toast';
 import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
 
 const PipelineSettings = () => {

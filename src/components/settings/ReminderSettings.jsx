@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { BellRing, Clock, Briefcase, FileText, DollarSign, MessageSquare } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Switch } from '@/components/ui/switch.jsx';
-import { Label } from '@/components/ui/label.jsx';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select.jsx';
-import { useSettings } from '@/hooks/useSettings.jsx';
-import { useAuth } from '@/hooks/useAuth.jsx';
-import { toast } from '@/components/ui/use-toast';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import { Switch } from '../ui/switch.jsx';
+import { Label } from '../ui/label.jsx';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select.jsx';
+import { useSettings } from '../../hooks/useSettings.jsx';
+import { useAuth } from '../../hooks/useAuth.jsx';
+import { toast } from '../ui/use-toast';
 
 const ReminderSettings = () => {
   const { settings, updateSettings } = useSettings();

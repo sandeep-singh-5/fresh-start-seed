@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { PlusCircle, Trash2, Edit, Save, X, Tag } from 'lucide-react';
-import { useSettings } from '@/hooks/useSettings.jsx';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { useToast } from '@/components/ui/use-toast';
+import { useSettings } from '../../hooks/useSettings.jsx';
+import { Button } from '../ui/button';
+import { Input } from '../ui/input';
+import { Card, CardHeader, CardTitle, CardContent } from '../ui/card';
+import { Badge } from '../ui/badge';
+import { useToast } from '../ui/use-toast';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -17,8 +17,8 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from '@/components/ui/alert-dialog';
-import { cn } from '@/lib/utils';
+} from '../ui/alert-dialog';
+import { cn } from '../../lib/utils';
 
 const TagSettings = () => {
   const { settings, addTag, updateTag, deleteTag } = useSettings();
