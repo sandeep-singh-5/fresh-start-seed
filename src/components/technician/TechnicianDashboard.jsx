@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Star, Clock, DollarSign, CheckCircle, Award, TrendingUp, Users, Wrench } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { useJobs } from '@/hooks/useJobs.jsx';
-import { useAuth } from '@/hooks/useAuth.jsx';
-import JobCard from '@/components/shared/JobCard.jsx';
+import { Button } from '../ui/button';
+import { Input } from '../ui/input';
+import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
+import { useJobs } from '../../hooks/useJobs.jsx';
+import { useAuth } from '../../hooks/useAuth.jsx';
+import JobCard from '../shared/JobCard.jsx';
 
 const TechnicianDashboard = () => {
   const [searchTerm, setSearchTerm] = useState('');
