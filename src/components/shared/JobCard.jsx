@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { DollarSign, MapPin, Clock, Star, CheckCircle, Hash } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { useJobs } from '@/hooks/useJobs';
-import { useAuth } from '@/hooks/useAuth';
-import { toast } from '@/components/ui/use-toast';
-import JobProgressBar from '@/components/jobs/JobProgressBar.jsx';
+import { Button } from '../ui/button';
+import { Badge } from '../ui/badge';
+import { useJobs } from '../../hooks/useJobs';
+import { useAuth } from '../../hooks/useAuth';
+import { toast } from '../../hooks/use-toast';
+import JobProgressBar from '../jobs/JobProgressBar.jsx';
 
 const JobCard = ({ job, userType }) => {
   const { applyToJob, completeJob } = useJobs();
