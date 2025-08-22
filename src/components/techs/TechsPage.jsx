@@ -1,18 +1,18 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Star, Briefcase, MapPin, Award, MessageSquare, ChevronDown, ChevronUp, Users, Heart, PlusCircle, ListPlus, CalendarDays, Clock, ShieldCheck, Sparkles } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { useAuth } from '@/hooks/useAuth.jsx'; 
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { useSettings } from '@/hooks/useSettings.jsx';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter, DialogTrigger } from '@/components/ui/dialog';
-import { useFavorites } from '@/hooks/useFavorites.jsx';
-import { useToast } from '@/components/ui/use-toast.js';
+import { Input } from '../ui/input';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../ui/card';
+import { Badge } from '../ui/badge';
+import { Button } from '../ui/button';
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
+import { useAuth } from '../../hooks/useAuth.jsx'; 
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
+import { useSettings } from '../../hooks/useSettings.jsx';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../ui/table";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter, DialogTrigger } from '../ui/dialog';
+import { useFavorites } from '../../hooks/useFavorites.jsx';
+import { useToast } from '../ui/use-toast.js';
 
 const TechsPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
