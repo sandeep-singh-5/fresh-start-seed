@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
 import { motion } from 'framer-motion';
 import { DollarSign, MapPin, User, Calendar, GripVertical, ExternalLink, Users, Workflow } from 'lucide-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge.jsx';
-import { Button } from '@/components/ui/button.jsx';
-import { useJobs } from '@/hooks/useJobs.jsx';
-import { useSettings } from '@/hooks/useSettings.jsx';
-import { toast } from '@/components/ui/use-toast';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog.jsx';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
+import { Badge } from '../ui/badge.jsx';
+import { Button } from '../ui/button.jsx';
+import { useJobs } from '../../hooks/useJobs.jsx';
+import { useSettings } from '../../hooks/useSettings.jsx';
+import { toast } from '../../hooks/use-toast';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '../ui/dialog.jsx';
 
 const PipelinePage = () => {
   const { allJobs, updateJobStatus, updateJobOrderInStage } = useJobs(); 
