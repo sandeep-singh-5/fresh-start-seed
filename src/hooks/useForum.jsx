@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect, useCallback, useContext } from 'react';
-import { useAuth } from '@/hooks/useAuth.jsx';
-import { toast } from '@/components/ui/use-toast';
+import { useAuth } from './useAuth.jsx';
+import { toast } from './use-toast';
 
 const ForumContext = createContext(null);
 

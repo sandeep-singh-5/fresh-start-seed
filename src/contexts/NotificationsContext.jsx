@@ -1,5 +1,5 @@
 import React, { createContext } from 'react';
-import { useNotifications as useNotificationsHook } from '@/hooks/useNotifications.jsx';
+import { useNotifications as useNotificationsHook } from '../hooks/useNotifications.jsx';
 
 const NotificationsContext = createContext();
 

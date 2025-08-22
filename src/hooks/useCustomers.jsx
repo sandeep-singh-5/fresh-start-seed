@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
-import { useAuth } from '@/hooks/useAuth.jsx';
+import { useAuth } from './useAuth.jsx';
 
 const CustomersContext = createContext();
 

@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { useToast } from '@/components/ui/use-toast';
-import { useCustomers } from '@/hooks/useCustomers';
+import { useAuth } from './useAuth.jsx';
+import { useToast } from './use-toast';
+import { useCustomers } from './useCustomers';
 
 const sampleJobs = [
     {

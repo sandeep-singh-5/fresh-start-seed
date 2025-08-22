@@ -1,5 +1,5 @@
 import React, { createContext } from 'react';
-import { useMessages as useMessagesHook } from '@/hooks/useMessages.jsx';
+import { useMessages as useMessagesHook } from '../hooks/useMessages.jsx';
 
 const MessagesContext = createContext();
 
