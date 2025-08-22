@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '../ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
+import { Button } from '../ui/button';
 import { MessageSquare, ChevronRight, Users, ThumbsUp, Star, Pin, Tag } from 'lucide-react';
 import { formatDistanceToNow, parseISO } from 'date-fns';
-import { Badge } from '@/components/ui/badge';
+import { Badge } from '../ui/badge';
 
 const iconMap = {
   MessageSquare,

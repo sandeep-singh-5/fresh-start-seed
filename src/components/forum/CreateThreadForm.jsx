@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { useForum } from '@/hooks/useForum.jsx';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
+import { useForum } from '../../hooks/useForum.jsx';
+import { Button } from '../ui/button';
+import { Input } from '../ui/input';
+import { Textarea } from '../ui/textarea';
+import { Label } from '../ui/label';
 import { Loader2, Tag } from 'lucide-react';
-import { toast } from '@/components/ui/use-toast';
-import { Badge } from '@/components/ui/badge';
+import { toast } from '../ui/use-toast';
+import { Badge } from '../ui/badge';
 
 const CreateThreadForm = ({ categoryId, onThreadCreated }) => {
   const { createThread } = useForum();
