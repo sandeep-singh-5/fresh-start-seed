@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Heart, ListPlus, Trash2, Edit3, User, Briefcase, MapPin, Star, PlusCircle, X, Wrench } from 'lucide-react';
-import { useFavorites } from '@/hooks/useFavorites.jsx';
-import { useAuth } from '@/hooks/useAuth.jsx';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter, DialogTrigger, DialogClose } from '@/components/ui/dialog';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Badge } from '@/components/ui/badge';
-import { useToast } from '@/components/ui/use-toast.js';
+import { useFavorites } from '../../hooks/useFavorites.jsx';
+import { useAuth } from '../../hooks/useAuth.jsx';
+import { Button } from '../ui/button';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '../ui/card';
+import { Input } from '../ui/input';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter, DialogTrigger, DialogClose } from '../ui/dialog';
+import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
+import { Badge } from '../ui/badge';
+import { useToast } from '../../hooks/use-toast.js';
 
 const FavoritesPage = () => {
   const { 
