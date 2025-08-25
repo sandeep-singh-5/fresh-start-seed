@@ -1,9 +1,10 @@
 import path from 'node:path';
 import react from '@vitejs/plugin-react';
 import { createLogger, defineConfig } from 'vite';
+import { componentTagger } from 'lovable-tagger';
 
 const isDev = process.env.NODE_ENV !== 'production';
-let inlineEditPlugin, editModeDevPlugin;
+let inlineEditPlugin: any, editModeDevPlugin: any;
 
 if (isDev) {
 	// @ts-ignore
@@ -191,14 +192,16 @@ logger.error = (msg, options) => {
 	loggerError(msg, options);
 }
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
 	customLogger: logger,
 	plugins: [
 		...(isDev ? [inlineEditPlugin(), editModeDevPlugin()] : []),
 		react(),
+		mode === 'development' && componentTagger(),
 		addTransformIndexHtml
-	],
+	].filter(Boolean),
 	server: {
+		host: "::",
 		port: 8080,
 		cors: true,
 		headers: {
@@ -222,4 +225,4 @@ export default defineConfig({
 			]
 		}
 	}
-});
+}));
