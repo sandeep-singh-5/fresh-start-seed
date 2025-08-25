@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Label } from '../ui/label';
@@ -22,6 +23,7 @@ const LoginForm = () => {
   const [usernameError, setUsernameError] = useState('');
   const { login, register, checkUsernameUnique } = useAuth();
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const handleInputChange = (field, value) => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -72,8 +74,8 @@ const LoginForm = () => {
     try {
       if (isLogin) {
         const loggedInUser = login(formData.email, formData.password);
-        if (!loggedInUser) {
-          // Toast for login failure is handled in useAuth
+        if (loggedInUser) {
+          navigate('/dashboard');
         }
       } else {
         const newUserPayload = {
@@ -86,8 +88,8 @@ const LoginForm = () => {
           location: formData.location,
         };
         const newUser = register(newUserPayload);
-        if (!newUser) {
-          // Toast for registration failure is handled in useAuth
+        if (newUser) {
+          navigate('/dashboard');
         }
       }
     } catch (error) {
