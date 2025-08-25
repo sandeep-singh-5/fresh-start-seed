@@ -6,7 +6,7 @@ import { Label } from '../ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
 import { useAuth } from '../../hooks/useAuth.jsx';
-import { toast } from '../../hooks/use-toast';
+import { useToast } from '../../hooks/use-toast';
 
 const LoginForm = () => {
   const [isLogin, setIsLogin] = useState(true);
@@ -21,6 +21,7 @@ const LoginForm = () => {
   });
   const [usernameError, setUsernameError] = useState('');
   const { login, register, checkUsernameUnique } = useAuth();
+  const { toast } = useToast();
 
   const handleInputChange = (field, value) => {
     setFormData(prev => ({ ...prev, [field]: value }));
