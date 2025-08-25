@@ -1,13 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth.jsx';
 import UserProfileCard from '../shared/UserProfileCard.jsx';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
 import { Button } from '../ui/button';
 import { Edit, Mail, Phone, Home, Info, Briefcase } from 'lucide-react';
 
-const ProfilePage = ({ setCurrentView }) => {
+const ProfilePage = () => {
   const { user } = useAuth();
+  const navigate = useNavigate();
 
   if (!user) {
     return (
@@ -18,7 +20,7 @@ const ProfilePage = ({ setCurrentView }) => {
   }
 
   const handleEditProfile = () => {
-    setCurrentView('edit-profile');
+    navigate('/edit-profile');
   };
   
   const InfoItem = ({ icon, label, value }) => {
@@ -34,7 +36,6 @@ const ProfilePage = ({ setCurrentView }) => {
       </div>
     );
   };
-
 
   return (
     <motion.div 

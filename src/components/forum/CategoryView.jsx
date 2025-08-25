@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useForum } from '../../hooks/useForum.jsx';
 import { useAuth } from '../../hooks/useAuth.jsx';
 import { Button } from '../ui/button';
@@ -24,7 +25,9 @@ const iconMap = {
   ThumbsUp,
 };
 
-const CategoryView = ({ categoryId, setCurrentView, setSelectedThread }) => {
+const CategoryView = () => {
+  const { id: categoryId } = useParams();
+  const navigate = useNavigate();
   const { getCategories, getThreadsByCategory, loading: forumLoading } = useForum();
   const { user } = useAuth();
   const [isCreateThreadOpen, setIsCreateThreadOpen] = useState(false);
@@ -45,7 +48,7 @@ const CategoryView = ({ categoryId, setCurrentView, setSelectedThread }) => {
       <Card>
         <CardContent className="p-6 text-center">
           <p className="text-xl font-semibold text-red-500">Category not found.</p>
-          <Button onClick={() => setCurrentView('forum')} variant="outline" className="mt-4">
+          <Button onClick={() => navigate('/forum')} variant="outline" className="mt-4">
             <ArrowLeft className="mr-2 h-4 w-4" /> Back to Forum
           </Button>
         </CardContent>
@@ -56,8 +59,7 @@ const CategoryView = ({ categoryId, setCurrentView, setSelectedThread }) => {
   const CategoryIcon = iconMap[category.icon] || MessageSquare;
 
   const handleThreadSelect = (threadId) => {
-    setSelectedThread(threadId);
-    setCurrentView('forum_thread');
+    navigate(`/forum_thread/${threadId}`);
   };
 
   return (
@@ -68,7 +70,7 @@ const CategoryView = ({ categoryId, setCurrentView, setSelectedThread }) => {
       className="space-y-6"
     >
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-        <Button onClick={() => setCurrentView('forum')} variant="outline" className="self-start sm:self-center">
+        <Button onClick={() => navigate('/forum')} variant="outline" className="self-start sm:self-center">
           <ArrowLeft className="mr-2 h-4 w-4" /> Back to Categories
         </Button>
         {user && (

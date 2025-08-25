@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth.jsx';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
@@ -10,8 +11,9 @@ import { toast } from '../../hooks/use-toast';
 import { Save, Image as ImageIcon, ArrowLeft } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar';
 
-const EditProfilePage = ({ setCurrentView }) => {
+const EditProfilePage = () => {
   const { user, updateUser } = useAuth();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -60,7 +62,7 @@ const EditProfilePage = ({ setCurrentView }) => {
       description: "Your profile information has been saved.",
       className: "bg-green-500 text-white",
     });
-    setCurrentView('profile');
+    navigate('/profile');
   };
 
   if (!user) {
@@ -74,7 +76,7 @@ const EditProfilePage = ({ setCurrentView }) => {
       className="space-y-6"
     >
       <div className="flex items-center justify-between">
-        <Button variant="ghost" onClick={() => setCurrentView('profile')} className="text-gray-600 hover:text-gray-900">
+        <Button variant="ghost" onClick={() => navigate('/profile')} className="text-gray-600 hover:text-gray-900">
           <ArrowLeft className="h-4 w-4 mr-2" />
           Back to Profile
         </Button>

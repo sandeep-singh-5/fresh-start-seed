@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useForum } from '../../hooks/useForum.jsx';
 import { useAuth } from '../../hooks/useAuth.jsx';
 import { Button } from '../ui/button';
@@ -105,8 +106,9 @@ const PostItem = ({ post, onEdit, onDelete }) => {
   );
 };
 
-
-const ThreadView = ({ threadId, setCurrentView, setSelectedCategory }) => {
+const ThreadView = () => {
+  const { id: threadId } = useParams();
+  const navigate = useNavigate();
   const { getThreadById, getPostsByThread, createPost, updatePost, deletePost, loading: forumLoading } = useForum();
   const { user } = useAuth();
   const [replyContent, setReplyContent] = useState('');
@@ -133,7 +135,7 @@ const ThreadView = ({ threadId, setCurrentView, setSelectedCategory }) => {
       <Card>
         <CardContent className="p-6 text-center">
           <p className="text-xl font-semibold text-red-500">Thread not found.</p>
-          <Button onClick={() => setCurrentView('forum')} variant="outline" className="mt-4">
+          <Button onClick={() => navigate('/forum')} variant="outline" className="mt-4">
             <ArrowLeft className="mr-2 h-4 w-4" /> Back to Forum
           </Button>
         </CardContent>
@@ -142,8 +144,7 @@ const ThreadView = ({ threadId, setCurrentView, setSelectedCategory }) => {
   }
 
   const handleBackToCategory = () => {
-    setSelectedCategory(thread.categoryId);
-    setCurrentView('forum_category');
+    navigate(`/forum_category/${thread.categoryId}`);
   };
 
   const handleReplySubmit = async () => {

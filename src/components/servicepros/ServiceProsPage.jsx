@@ -193,7 +193,7 @@ const ServiceProsPage = ({ setCurrentView }) => {
     }
     const proDisplayName = servicePro.username || servicePro.name || servicePro.companyName;
     startOrGoToConversation(servicePro.id, proDisplayName);
-    setCurrentView('messages');
+    navigate('/messages');
   };
 
   return (

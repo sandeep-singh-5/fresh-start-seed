@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { useForum } from '../../hooks/useForum.jsx';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../ui/card';
 import { Button } from '../ui/button';
@@ -12,13 +13,13 @@ const iconMap = {
   ThumbsUp,
 };
 
-const ForumPage = ({ setCurrentView, setSelectedCategory }) => {
+const ForumPage = () => {
   const { getCategories, loading: forumLoading } = useForum();
+  const navigate = useNavigate();
   const categories = getCategories();
 
   const handleCategorySelect = (categoryId) => {
-    setSelectedCategory(categoryId);
-    setCurrentView('forum_category');
+    navigate(`/forum_category/${categoryId}`);
   };
 
   if (forumLoading) {
