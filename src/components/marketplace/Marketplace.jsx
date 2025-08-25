@@ -8,6 +8,7 @@ import MarketplaceList from './MarketplaceList';
 import LeadViewDialog from './LeadViewDialog';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
 import { toast } from '../../hooks/use-toast';
+import { Helmet } from 'react-helmet';
 
 const Marketplace = () => {
   const [searchTerm, setSearchTerm] = useState('');
