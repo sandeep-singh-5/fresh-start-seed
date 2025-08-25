@@ -8,7 +8,6 @@ import MarketplaceList from './MarketplaceList';
 import LeadViewDialog from './LeadViewDialog';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
 import { toast } from '../../hooks/use-toast';
-import { Helmet } from 'react-helmet';
 
 const Marketplace = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -85,11 +84,7 @@ const Marketplace = () => {
 
   return (
     <>
-     <Helmet>
-      <title>Marketplace</title>
-      <meta name="description" content="Browse and manage available services in the marketplace." />
-    </Helmet>
-    <div className="space-y-6">
+     <div className="space-y-6">
       <div>
         <h1 className="text-3xl font-bold text-gray-900">Lead Marketplace</h1>
         <p className="text-gray-600">Discover profitable service opportunities with transparent profit sharing</p>
