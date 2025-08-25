@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect, useContext, useCallback } from 'react';
-import { useToast } from './use-toast';
+import { useToast } from '../components/ui/use-toast';
 import { initialUsersData, createNewUserObject } from './auth/userData';
 import { saveUsersToStorage, loadUsersFromStorage, saveLoggedInUserToStorage, loadLoggedInUserFromStorage, removeLoggedInUserFromStorage } from './auth/authStorage';
 

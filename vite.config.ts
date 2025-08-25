@@ -6,9 +6,7 @@ const isDev = process.env.NODE_ENV !== 'production';
 let inlineEditPlugin, editModeDevPlugin;
 
 if (isDev) {
-	// @ts-ignore
 	inlineEditPlugin = (await import('./plugins/visual-editor/vite-plugin-react-inline-editor.js')).default;
-	// @ts-ignore
 	editModeDevPlugin = (await import('./plugins/visual-editor/vite-plugin-edit-mode.js')).default;
 }
 
@@ -145,7 +143,7 @@ window.fetch = function(...args) {
 
 const addTransformIndexHtml = {
 	name: 'add-transform-index-html',
-	transformIndexHtml(html: string) {
+	transformIndexHtml(html) {
 		return {
 			html,
 			tags: [
@@ -199,7 +197,6 @@ export default defineConfig({
 		addTransformIndexHtml
 	],
 	server: {
-		port: 8080,
 		cors: true,
 		headers: {
 			'Cross-Origin-Embedder-Policy': 'credentialless',
